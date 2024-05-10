@@ -20,5 +20,5 @@ Mobile Carrier Database
 -  Did you run your contribution through a json linter
 -  What sources did you crossreference with, share the links
 - We will review your pull request and let you know when we merge it.
-- For accuracy, we will only accept your PR if you live in or in the neigboring country where you submitted this from. If someone living in Kenya submits prefixes for Nigeria, the PR is likely going to get rejected.
+- For accuracy, we will only accept your PR if you live in or in the neighboring country where you submitted this from. If someone living in Kenya submits prefixes for Nigeria, the PR is likely going to get rejected.
    
