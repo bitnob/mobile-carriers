@@ -1,0 +1,23 @@
+{
+  "name": "mobile-carriers",
+  "version": "1.0.0",
+  "description": "A list of telcos with their prefixes and their support for mobile money services",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitnob/mobile-carriers.git"
+  },
+  "keywords": [
+    "telcos",
+    "mobilemoney"
+  ],
+  "author": "Bernard Parah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitnob/mobile-carriers/issues"
+  },
+  "homepage": "https://github.com/bitnob/mobile-carriers#readme"
+}
