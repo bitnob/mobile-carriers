@@ -53,7 +53,7 @@ function getNetworkPrefixes(networkName) {
 // Networks offering mobile money services in a specific country
 function getMobileMoneyNetworks(country) {
     const capitalizedCountryName = country.charAt(0).toUpperCase() + country.slice(1).toLowerCase();
-    const networks = mobileCarriers[country]?.networks;
+    const networks = mobileCarriers[capitalizedCountryName]?.networks;
     return Object.keys(networks).filter(network => networks[network]['mobile money']);
 }
 
