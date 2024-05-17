@@ -26,7 +26,7 @@ const {
   phoneNumberLookup,
   validatePhoneNumber,
   getTelcoByPhoneNumber,
-  getTelcos
+  getTelcosByCountry
 } = require('mobile-carriers');
 ```
 
@@ -132,7 +132,7 @@ This function retrieves all telcos in a specified country using the country code
 **Example:**
 
 ```javascript
-console.log(getTelcos('+233'));
+console.log(getTelcosByCountry('+233'));
 // Output: {
 //   countryCode: '+233',
 //   isoCode: 'GH',
