@@ -1,4 +1,4 @@
-const mobileCarriers = require('./carriers.json');
+const mobileCarriers = require('./src/carriers.json');
 
 // Find network by phone number and country code
 function findNetworkByPhoneNumber(phoneNumber, countryCode) {

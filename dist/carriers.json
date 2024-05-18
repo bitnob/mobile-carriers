@@ -1,0 +1,131 @@
+{
+    "Benin": {
+        "countryCode": "+229",
+        "isoCode": "BJ",
+        "regex": "^(?:\\+229)(0?)(51|52|54|55)\\d{6}$",
+        "networks": {
+            "MTN": {
+                "prefixes": ["054", "055"],
+                "mobileMoney": true
+            },
+            "Moov": {
+                "prefixes": ["051", "052"],
+                "mobileMoney": true
+            }
+        }
+    },
+    "Ghana": {
+        "countryCode": "+233",
+        "isoCode": "GH",
+        "regex": "^(?:\\+233)(0?)(20|23|24|26|27|28|50|54|55|56|57|58|59)\\d{7}$",
+        "networks": {
+            "MTN": {
+                "prefixes": ["024", "054", "055", "059"],
+                "mobileMoney": true
+            },
+            "Vodafone": {
+                "prefixes": ["020", "050"],
+                "mobileMoney": true
+            },
+            "AirtelTigo": {
+                "prefixes": ["026", "027", "057", "056"],
+                "mobileMoney": true
+            }
+        }
+    },
+    "Ivory Coast": {
+        "countryCode": "+225",
+        "isoCode": "CI",
+        "regex": "^(?:\\+225)(0?)(51|52|54|55|76|77)\\d{6}$",
+        "networks": {
+            "MTN": {
+                "prefixes": ["054", "055"],
+                "mobileMoney": true
+            },
+            "Orange": {
+                "prefixes": ["076", "077"],
+                "mobileMoney": true
+            },
+            "Moov": {
+                "prefixes": ["051", "052"],
+                "mobileMoney": true
+            }
+        }
+    },
+    "Kenya": {
+        "countryCode": "+254",
+        "isoCode": "KE",
+        "regex": "^(?:\\+254)(0?)(701|711|722|723|733|734|740)\\d{6}$",
+        "networks": {
+            "Safaricom": {
+                "prefixes": ["0701", "0711", "0722", "0723"],
+                "mobileMoney": true
+            },
+            "Airtel": {
+                "prefixes": ["0733", "0734", "0740"],
+                "mobileMoney": true
+            }
+        }
+    },
+    "Nigeria": {
+        "countryCode": "+234",
+        "isoCode": "NG",
+        "regex": "^(?:\\+234)(0?)(70[1-9]|80[2-9]|81[0-8]|90[2-9])\\d{7}$",
+        "networks": {
+            "MTN": {
+                "prefixes": ["0803", "0806", "0703", "0706", "0810", "0813", "0814", "0816", "0903", "0906"],
+                "mobileMoney": true
+            },
+            "Glo": {
+                "prefixes": ["0805", "0807", "0811", "0815", "0705", "0905"],
+                "mobileMoney": false
+            },
+            "Airtel": {
+                "prefixes": ["0802", "0808", "0708", "0812", "0701", "0902", "0907"],
+                "mobileMoney": true
+            },
+            "9Mobile": {
+                "prefixes": ["0809", "0817", "0818", "0909"],
+                "mobileMoney": true
+            }
+        }
+    },
+    "South Africa": {
+        "countryCode": "+27",
+        "isoCode": "ZA",
+        "regex": "^(?:\\+27)(0?)(7[2-8]|8[2-3]|81)\\d{7}$",
+        "networks": {
+            "Vodacom": {
+                "prefixes": ["082", "072", "076"],
+                "mobileMoney": true
+            },
+            "MTN": {
+                "prefixes": ["083", "073", "078"],
+                "mobileMoney": true
+            },
+            "Cell C": {
+                "prefixes": ["084", "074"],
+                "mobileMoney": false
+            },
+            "Telkom": {
+                "prefixes": ["081", "079"],
+                "mobileMoney": false
+            }
+        }
+    },
+    "Togo": {
+        "countryCode": "+228",
+        "isoCode": "TG",
+        "regex": "^(?:\\+228)(0?)(90|91|92|93)\\d{6}$",
+        "networks": {
+            "TogoCom": {
+                "prefixes": ["090", "091"],
+                "mobileMoney": true
+            },
+            "Moov": {
+                "prefixes": ["092", "093"],
+                "mobileMoney": true
+            }
+        }
+    }
+}
