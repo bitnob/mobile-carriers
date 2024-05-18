@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTelcosByCountry = exports.getTelcoByPhoneNumber = exports.validatePhoneNumber = exports.phoneNumberLookup = exports.getCountriesWithNetwork = exports.getMobileMoneyNetworks = exports.getNetworkPrefixes = exports.findNetworkByPhoneNumber = void 0;
+exports.getCountriesWithNetwork = exports.getMobileMoneyNetworks = exports.getNetworkPrefixes = exports.getTelcoByPhoneNumber = exports.getTelcosByCountry = exports.getCountryByCode = exports.validatePhoneNumber = exports.hasMobileMoney = exports.phoneNumberLookup = exports.localizedPhoneNumber = exports.extractCountryCode = exports.findNetworkByPhoneNumber = void 0;
 const carriers_json_1 = __importDefault(require("./carriers.json"));
 const mobileCarriersData = carriers_json_1.default;
 function findNetworkByPhoneNumber(phoneNumber, countryCode) {
@@ -27,11 +27,13 @@ function extractCountryCode(phoneNumber) {
     const match = phoneNumber.match(phonePrefixRegex);
     return match ? (match[0].startsWith('+') ? match[0] : `+${match[1]}`) : null;
 }
+exports.extractCountryCode = extractCountryCode;
 function localizedPhoneNumber(phoneNumber) {
     const countryCodeRegex = /^\+\d{1,3}/;
     const localPhoneNumber = phoneNumber.replace(countryCodeRegex, '');
     return localPhoneNumber.startsWith('0') ? localPhoneNumber : '0' + localPhoneNumber;
 }
+exports.localizedPhoneNumber = localizedPhoneNumber;
 function phoneNumberLookup(phoneNumber) {
     const countryCode = extractCountryCode(phoneNumber);
     if (!countryCode)
@@ -64,6 +66,7 @@ function hasMobileMoney(countryCode, networkName) {
     }
     return null;
 }
+exports.hasMobileMoney = hasMobileMoney;
 function validatePhoneNumber(phoneNumber) {
     const countryCode = extractCountryCode(phoneNumber);
     if (!countryCode)
@@ -87,6 +90,7 @@ function getCountryByCode(countryCode) {
     }
     return null;
 }
+exports.getCountryByCode = getCountryByCode;
 function getTelcosByCountry(countryCode) {
     return getCountryByCode(countryCode);
 }
