@@ -59,7 +59,7 @@ This function takes a network name, capitalizes it, and returns all prefixes ass
 **Example:**
 
 ```javascript
-console.log(getNetworkPrefixes('mtn'));
+console.log(getNetworkPrefixes('MTN'));
 // Output: ['0803', '0806', '0703', ...]
 ```
 
