@@ -6,9 +6,9 @@ describe("extractCountryCode", () => {
     expect(countryCode).toBe("+234");
   });
 
-  test("should return null for an invalid phone number", () => {
+  test('should return "Invalid number format" for malformed number', () => {
     const countryCode = extractCountryCode("12345");
-    expect(countryCode).toBeNull();
+    expect(countryCode).toBe("Invalid number format");
   });
 
   test("should handle phone numbers without a plus sign", () => {
@@ -33,8 +33,8 @@ describe("extractCountryCode", () => {
     expect(countryCodeSouthAfrica).toBe("+27");
   });
 
-  test("should return null for a malformed phone number", () => {
+  test('should return "Invalid number format" for malformed number', () => {
     const countryCode = extractCountryCode("++12345");
-    expect(countryCode).toBeNull();
+    expect(countryCode).toBe("Invalid number format");
   });
 });
