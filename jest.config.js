@@ -4,4 +4,5 @@ module.exports = {
   },
   testEnvironment: 'node',
   testMatch: ['**/test/**/*.test.ts'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/']
 };
