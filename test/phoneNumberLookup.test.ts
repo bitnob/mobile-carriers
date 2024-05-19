@@ -13,8 +13,8 @@ describe("phoneNumberLookup", () => {
     });
   });
 
-  it('should return "Invalid number format" for an invalid phone number', () => {
+  it('should return null for an invalid phone number', () => {
     const result = phoneNumberLookup("12345");
-    expect(result).toBe("Invalid number format");
+    expect(result).toBe(null);
   });
 });

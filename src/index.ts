@@ -120,10 +120,10 @@ function hasMobileMoney(
   return null;
 }
 
-function phoneNumberLookup(phoneNumber: string) {
-    if (phoneNumber.length < 11) return "Invalid number format";
+function phoneNumberLookup(phoneNumber: string): any {
+    if (phoneNumber.length < 11) return null;
     const countryCode = extractCountryCode(phoneNumber);
-    if (!countryCode) return "Invalid number format";
+    if (!countryCode) return null;
 
   const localPhoneNumber = localizedPhoneNumber(phoneNumber);
   const network = findNetworkByPhoneNumber(localPhoneNumber, countryCode);
