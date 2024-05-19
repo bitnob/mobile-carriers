@@ -131,9 +131,9 @@ function hasMobileMoney(
 }
 
 function phoneNumberLookup(phoneNumber: string): LookUpPhone {
-    if (phoneNumber.length < 11) throw Error("phone number is invalid");
+    if (phoneNumber.length < 11) throw new Error("phone number is invalid");
     const countryCode = extractCountryCode(phoneNumber);
-    if (!countryCode) throw Error("incorrect country code");
+    if (!countryCode) throw new Error("incorrect country code");
 
   const localPhoneNumber = localizedPhoneNumber(phoneNumber);
   const network = findNetworkByPhoneNumber(localPhoneNumber, countryCode);
