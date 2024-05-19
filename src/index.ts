@@ -13,6 +13,16 @@ interface Carrier {
   };
 }
 
+interface LookUpPhone {
+  phoneNumber: string;
+  countryCode: string;
+  localPhoneNumber: string;
+  network: string;
+  mobileMoney: boolean | null ;
+  isValid: boolean;
+}
+
+
 const mobileCarriersData: { [country: string]: Carrier } = mobileCarriers;
 
 function extractCountryCode(phoneNumber: string): string | null {
@@ -120,10 +130,10 @@ function hasMobileMoney(
   return null;
 }
 
-function phoneNumberLookup(phoneNumber: string): any {
-    if (phoneNumber.length < 11) return null;
+function phoneNumberLookup(phoneNumber: string): LookUpPhone {
+    if (phoneNumber.length < 11) throw new Error("phone number is invalid");
     const countryCode = extractCountryCode(phoneNumber);
-    if (!countryCode) return null;
+    if (!countryCode) throw new Error("incorrect country code");
 
   const localPhoneNumber = localizedPhoneNumber(phoneNumber);
   const network = findNetworkByPhoneNumber(localPhoneNumber, countryCode);
